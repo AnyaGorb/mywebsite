@@ -4,12 +4,8 @@
 
 {% block content %}
     <div class="features">
-        <h1>{{ title }}</h1>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta laudantium rem dolores, doloribus earum nemo molestiae. Quos officia accusamus, voluptates beatae eveniet quo nam laudantium quas error enim eaque veritatis.</p>
-        <button class="btn btn-warning">Заказать</button>
-
-        {% for el in values %}
-            <p>{{ el }}</p>
-        {% endfor %}
+        <h1>Ого, вот это чудо!</h1>
+        <p>Вы сотворили что-то невероятное и жаждете этим поделиться? <br> Скорее жмите на кнопку ниже и поведайте о своей идее с гордо поднятой головой – <b>связала сама!</b></p>
+        <a href="{% url 'create' %}"><button class="success">Поделиться идеей</button></a>
     </div>
 {% endblock %}

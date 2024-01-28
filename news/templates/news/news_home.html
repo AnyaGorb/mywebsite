@@ -1,16 +1,16 @@
 {% extends 'main/layout.html' %}
 
-{% block title %}Новости на сайте{% endblock %}
+{% block title %}Статьи на сайте{% endblock %}
 
 {% block content %}
     <div class="features">
-        <h1>Новости на сайте</h1>
+        <h1>Статьи на сайте</h1>
         {% if news %}
             {% for el in news %}
                 <div class="alert alert-warning">
                     <h3>{{ el.title }}</h3>
                     <p>{{ el.announce }}</p>
-                    <a href="{% url 'news_detail' el.id %}" class="btn btn-warning">Читать полностью</a>
+                    <a href="{% url 'news_detail' el.id %}" class="success">Читать полностью</a>
                 </div>
             {% endfor %}
         {% else %}

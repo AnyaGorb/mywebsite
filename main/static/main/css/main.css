@@ -1,35 +1,61 @@
+body {
+    font-family: 'Mulish', sans-serif;
+    font-size: 18px;
+    color: #442D28;
+}
+
+p {
+    text-align: left;
+    max-width: 600px; 
+    margin: 50px auto 20px auto;
+}
+
+h1 {
+    font-family: 'Philosopher', sans-serif;
+}
+
 aside {
     float: left;
-    background: #e1e1e1;
-    width: 20%;
-    padding: 2,5%;
-    height: 100vh;
-    border-right: 5 px solid #515151;
+    background: #FFE5D6;
+    width: 18%;
+    padding: 2% 1%;
+    height: 100vmax;
+    border-right: 2px solid #FEBE98;
 }
 
 aside img {
-    width: 80px;
+    width: 90px;
     float: left;
+    margin-left: 12px;
+    margin-right: 10px;
 }
 
 aside .logo {
+    font-family: 'Philosopher', sans-serif;
     font-size: 24px;
-    margin-left: 10px;
+    color: #AF6352;
+    line-height: 22px;
     font-weight: bold;
     position: relative;
-    top: -5px;
+    top: 23px;
 }
 aside h3 {
     margin-top: 50px;
     font-size: 18px;
 }
 
-aside ul {list-style: none}
+aside ul {
+    margin-top: 100px;
+    list-style: none;
+    position: relative;
+    left: -20px;
+}
 
 aside ul li {
-    color: black;
+    color: #AF6352;
     display: block;
     margin-top: 20px;
+    text-align: center;
 }
 
 aside ul a {
@@ -41,23 +67,82 @@ aside ul li:hover, aside ul a:hover {
     text-decoration: none;
 }
 
-main .features {
-    float: left;
-    margin-top: 100px;
+.info {
+    background-color: #ffffff;
+    border: 2px solid #FEBE98;
+    border-radius: 32px;
+    color: #AF6352;
+    padding: 12px 16px;
     text-align: center;
-    width: 75%;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
 }
 
-main .features h1 {font-size: 50px;}
-main .features p {max-width: 400px; margin: 20px auto}
+.info:hover {
+    background-color: #FEBE98;
+    border: 2px solid #FEBE98;
+    color: #ffffff;
+}
+
+.success {
+    background-color: #FEBE98;
+    border: 2px solid #FEBE98;
+    border-radius: 32px;
+    color: #ffffff;
+    padding: 12px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+}
+
+.success:hover {
+    background-color: #ffffff;
+    border: 2px solid #FEBE98;
+    color: #AF6352;
+}
+
+.danger {
+    background-color: #ffffff;
+    border: 2px solid #5C403A;
+    border-radius: 32px;
+    color: #442D28;
+    padding: 12px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin-right: 40px;
+}
+
+.danger:hover {
+    background-color: #5C403A;
+    border: 2px solid #5C403A;
+    color: #ffffff;
+}
+
+main .features {
+    float: left;
+    text-align: center;
+    width: 82%;
+}
+
+main .features h1 {font-size: 48px; margin-top: 70px}
+main .features h3 {font-size: 28px; font-family: 'Philosopher', sans-serif}
 
 .alert-warning {
     float: left;
     clear: both;
-    width: 400px;
-    margin: 20px 34%;
+    width: 700px;
+    margin: 18px 21%;
     text-align: left;
+    background: #ffffff;
+    border: 2px solid #FEBE98;
+    padding: 32px;
 }
+
+.alert-warning p {margin: 20px}
 
 form {
     margin-left: 32%;

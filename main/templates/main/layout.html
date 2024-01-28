@@ -10,15 +10,13 @@
 </head>
 <body>
     <aside>
-        <img src="{% static 'main/img/медвежонок.svg' %}" alt="медвежонок">
-        <span class='logo'>Медвежонок</span>
-        <h3>Навигация</h3>
+        <img src="{% static 'main/img/связала сама.svg' %}" alt="лого">
+        <span class='logo'>Связала <br> сама</span>
         <ul>
             <a href="{% url 'home' %}"><li>Главная</li></a>
             <a href="{% url 'about' %}"><li>О нас</li></a>
-            <a href="{% url 'news_home' %}"><li>Новости</li></a>
-            <a href=""><li>Контакты</li></a>
-            <a href="{% url 'create' %}"><li><button class="btn btn-info">Добавить запись</button></li></a>
+            <a href="{% url 'news_home' %}"><li>Статьи</li></a>
+            <a href="{% url 'create' %}"><li><button class="info">Поделиться идеей</button></li></a>
         </ul>
     </aside>
     <main>
