@@ -1,12 +1,27 @@
-body {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+  body {
     font-family: 'Mulish', sans-serif;
     font-size: 18px;
     color: #442D28;
 }
 
+.container {
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
 p {
     text-align: left;
-    max-width: 600px; 
+    max-width: 650px; 
     margin: 50px auto 20px auto;
 }
 
@@ -14,55 +29,53 @@ h1 {
     font-family: 'Philosopher', sans-serif;
 }
 
-aside {
-    float: left;
-    background: #FFE5D6;
-    width: 18%;
-    padding: 2% 1%;
-    height: 100vmax;
-    border-right: 2px solid #FEBE98;
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 5px 0;
+    z-index: 999;
+    background-color: rgba(255, 229, 214, 0.7);
+    border-bottom: 2px solid #FEBE98;
 }
 
-aside img {
-    width: 90px;
+nav {
+    max-width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+img {
+    width: 200px;
     float: left;
-    margin-left: 12px;
-    margin-right: 10px;
 }
 
-aside .logo {
-    font-family: 'Philosopher', sans-serif;
-    font-size: 24px;
-    color: #AF6352;
-    line-height: 22px;
-    font-weight: bold;
-    position: relative;
-    top: 23px;
-}
-aside h3 {
+header h3 {
     margin-top: 50px;
     font-size: 18px;
 }
 
-aside ul {
-    margin-top: 100px;
-    list-style: none;
-    position: relative;
-    left: -20px;
+ul {
+    display: flex;
+    gap: 60px;
+    align-items: center;
 }
 
-aside ul li {
+ul li {
     color: #AF6352;
     display: block;
     margin-top: 20px;
     text-align: center;
 }
 
-aside ul a {
+ul a {
     text-decoration: none;
 }
 
-aside ul li:hover, aside ul a:hover {
+ul li:hover, ul a:hover {
     color: #ffffff;
     text-decoration: none;
 }
@@ -113,7 +126,6 @@ aside ul li:hover, aside ul a:hover {
     text-decoration: none;
     display: inline-block;
     font-size: 18px;
-    margin-right: 40px;
 }
 
 .danger:hover {
@@ -123,29 +135,127 @@ aside ul li:hover, aside ul a:hover {
 }
 
 main .features {
-    float: left;
+    float: center;
     text-align: center;
-    width: 82%;
+    width: 100%;
 }
 
-main .features h1 {font-size: 48px; margin-top: 70px}
+main .features h1 {font-size: 48px; padding-top: 170px}
 main .features h3 {font-size: 28px; font-family: 'Philosopher', sans-serif}
 
 .alert-warning {
-    float: left;
+    float: center;
     clear: both;
-    width: 700px;
-    margin: 18px 21%;
+    margin: 20px 0 20px 0;
     text-align: left;
     background: #ffffff;
     border: 2px solid #FEBE98;
     padding: 32px;
 }
 
-.alert-warning p {margin: 20px}
+.alert-warning p {margin: 20px 0}
 
 form {
-    margin-left: 32%;
-    width: 500px;
+    float: center;
     margin-top: 50px;
+}
+
+label {
+    display: none;
+  }
+  
+  #burger-toggle {
+    display: none;
+  }
+  
+@media (max-width: 768px) {
+  img {
+    width: 170px;
+  }
+  label {
+    position: fixed;
+    display: block;
+    right: 30px;
+    top: 32px;
+    height: 25px;
+    width: 30px;
+    text-align: center;
+  }
+
+  label::after, label::before, label span {
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #AF6352;
+    transition: .3s;
+  }
+
+  label::before {
+    content: "";
+    top: 0;
+  }
+
+  label::after {
+    content: "";
+    bottom: 0;
+  }
+
+  label span {
+    top: 11px;
+  }
+
+  #burger-toggle:checked ~ label::after {
+    transform: rotate(45deg);
+    bottom: 10px;
+  }
+
+  #burger-toggle:checked ~ label::before {
+    transform: rotate(-45deg);
+    top: 12px;
+  }
+
+  #burger-toggle:checked ~ label span {
+    transform: rotate(-45deg);
+    top: 12px;
+  }
+
+  ul {
+    position: fixed;
+    left: 0;
+    right: 0;
+    padding: 400px 0 36px 0;
+    z-index: -1;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 16px;
+    background-color: rgba(255, 229, 214);
+    border-bottom: 2px solid #FEBE98;
+
+    left: -100vw;
+    right: 100vw;
+
+  }
+
+  #burger-toggle:checked ~ ul {
+    left: 0;
+    right: 0;
+  }
+
+  ul a {
+    font-size: 20px;
+  }
+
+  .info {
+    font-size: 20px;
+  }
+}
+  
+@media (max-width: 480px) {
+  .container {
+    padding: 0 20px;
+  }
+  main .features h1 {
+        font-size: 36px;
+    }
 }
